@@ -1,2 +1,2 @@
 # detections-as-code-
-A repository of detections that I've written.
+Vendor agnostic detection content (SPL + KQL) with metadata and test fixtures. Focused on endpoint + cloud use cases, packaged for CI/CD later.
