@@ -1,4 +1,4 @@
-index=sysmon EventID=1
+index=sysmon EventCode=1
 | rex field=ParentImage "(?i)\\\\(?<parent_proc>[^\\\\]+\.exe$)"
 | rex field=Image "(?i)\\\\(?<child_proc>[^\\\\]+\.exe$)"
 | where match(parent_proc, "(?i)^(winword|pwrpnt|excel)\.exe$") AND match(child_proc, "(?i)^(powershell|wscript|cscript|cmd)\.exe$")
