@@ -2,4 +2,4 @@ index="wineventlog" EventCode=4688
 | rex field=ParentProcessName "(?i)\\\\(?<parent_proc>[^\\\\]+\.exe$)"
 | rex field=NewProcessName "(?i)\\\\(?<child_proc>[^\\\\]+\.exe$)"
 | where match(parent_proc, "(?i)^(winword|pwrpnt|excel)\.exe$") AND match(child_proc, "(?i)^(powershell|wscript|cscript|cmd)\.exe$")
-| table _time Computer TargetUserName parent_proc child_proc CommandLine
+| table _time Computer TargetUserName parent_proc child_proc ProcessCommandLine

@@ -1,0 +1,3 @@
+DeviceProcessEvents
+| extend parent_proc=tostring(split(ParentImage, "\\")[-1]), extend child_proc=tostring(split(Image, "\\")[-1])
+| where parent_proc ~in ("winword.exe", "pwrpnt.exe", "excel")
