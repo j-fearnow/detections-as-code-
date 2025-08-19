@@ -19,7 +19,7 @@ detection:
         ParentImage|endswith:
             - 'winword.exe'
             - 'excel.exe'
-            - 'powrpnt.exe'
+            - 'powerpnt.exe'
     selection_2:
         Image|endswith: 
             - 'powershell.exe'

@@ -46,9 +46,9 @@ DeviceProcessEvents
 ---
 
 ## Testing
-- **Environment:** [Splunk / Log Analytics Workspace]
+- **Environment:** [Splunk / Azure Data Explorer]
 - **Positive Case:** winword.exe executing powershell.exe
-- **Negative Case:** explorer.exe executing powershell.exe
+- **Negative Case:** winword.exe executing outlook.exe
 - **Evidence:** 
 
 ### Splunk Output Sysmon
