@@ -51,9 +51,17 @@ DeviceProcessEvents
 - **Negative Case:** explorer.exe executing powershell.exe
 - **Evidence:** 
 
-### Splunk Output Sysmon(splunk_output_sysmon.png)
-### Splunk Output WineventLog(splunk_output_wineventlog.png)
-### KQL Output(KQL_output.png)
+### Splunk Output Sysmon
+
+<img width="1919" height="435" alt="splunk_output_sysmon" src="https://github.com/user-attachments/assets/ec05e856-e870-47dd-94d0-ed11dd4ece4f" />
+
+### Splunk Output WineventLog
+
+<img width="1920" height="432" alt="splunk_output_wineventlog" src="https://github.com/user-attachments/assets/25a472ef-5c08-4096-aa37-2778ff4cb04f" />
+
+### KQL Output
+
+<img width="1920" height="1068" alt="KQL_output" src="https://github.com/user-attachments/assets/300844e9-c7e8-4382-85d7-f0a15220b429" />
 
 ---
 
