@@ -1,0 +1,34 @@
+title: office_spawns_powershell 
+id: endpoint_office_spawns_powershell_v1
+status: experimental
+description: Detects process creations where Office products invoke Powershell, CMD, Wscript or Cscript. 
+references:
+    - https://cyberlad.io/how-do-macros-pose-a-cybersecurity-risk/
+author: Jesse Fearnow
+date: 2025-08-18
+tags: 
+    - attack.t1059          # Command and Scripting Interpreter
+    - attack.t1059.001      # PowerShell
+    - attack.t1059.003      # Windows Command Shell
+    - attack.t1059.005      # Visual Basic (WScript/CScript)
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection_1:
+        ParentImage|endswith:
+            - 'winword.exe'
+            - 'excel.exe'
+            - 'powerpnt.exe'
+    selection_2:
+        Image|endswith: 
+            - 'powershell.exe'
+            - 'wscript.exe'
+            - 'cscript.exe'
+            - 'cmd.exe'
+    condition: selection_parent and selection_child
+falsepositives:
+    - Legitimate Office macros or add-ins
+    - Software updaters or admin scripts launched from Office
+    - Security tools executing via Office templates
+level: high
