@@ -1,4 +1,5 @@
 DeviceProcessEvents
-| extend parent_proc=tostring(split(ParentImage, "\\")[-1]), extend child_proc=tostring(split(Image, "\\")[-1])
+| extend parent_proc=tostring(split(InitiatingProcessFileName, "\\")[-1])
+| extend child_proc=tostring(split(FileName, "\\")[-1])
 | where parent_proc in~ ("winword.exe", "pwrpnt.exe", "excel") and child_proc in~ ("powershell.exe", "wscript.exe", "cscript.exe", "cmd.exe")
-| project Timestamp, Computer, User, parent_proc, child_proc, CommandLine
+| project Timestamp, DeviceName, InitiatingProcessAccountName, parent_proc, child_proc, ProcessCommandLine
