@@ -8,14 +8,6 @@
     "ProcessCommandLine": "powershell.exe -nop -enc AAA"
   },
   {
-    "Timestamp": "2025-08-18T14:05:00Z",
-    "DeviceName": "HOST1",
-    "InitiatingProcessAccountName": "test",
-    "InitiatingProcessFileName": "C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
-    "FileName": "C:\\Program Files\\Microsoft Office\\root\\Office16\\OUTLOOK.EXE",
-    "ProcessCommandLine": "outlook.exe"
-  },
-  {
     "Timestamp": "2025-08-18T14:02:00Z",
     "EventID": 4688,
     "Computer": "HOST1",
@@ -25,15 +17,6 @@
     "CommandLine": "powershell.exe -nop -enc AAA"
   },
   {
-    "Timestamp": "2025-08-18T14:05:00Z",
-    "EventID": 4688,
-    "Computer": "HOST1",
-    "TargetUserName": "test",
-    "ParentProcessName": "C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
-    "NewProcessName": "C:\\Program Files\\Microsoft Office\\root\\Office16\\OUTLOOK.EXE",
-    "CommandLine": "outlook.exe"
-  },
-  {
     "Timestamp": "2025-08-18T14:02:00Z",
     "EventID": 1,
     "Computer": "HOST1",
@@ -41,14 +24,5 @@
     "ParentImage": "C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
     "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
     "CommandLine": "powershell.exe -nop -enc AAA"
-  },
-  {
-    "Timestamp": "2025-08-18T14:05:00Z",
-    "EventID": 1,
-    "Computer": "HOST1",
-    "User": "test",
-    "ParentImage": "C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
-    "Image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\OUTLOOK.EXE",
-    "CommandLine": "outlook.exe"
   }
 ]

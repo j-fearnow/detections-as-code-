@@ -1,7 +1,4 @@
-Timestamp,DeviceName,InitiatingProcessAccountName,InitiatingProcessFileName,FileName,ProcessCommandLine,EventID,Computer,TargetUserName,ParentProcessName,NewProcessName,CommandLine,User,ParentImage,Image
-2025-08-18T14:02:00Z,HOST1,test,C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE,C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,powershell.exe -nop -enc AAA,,,,,,,,,
-2025-08-18T14:05:00Z,HOST1,test,C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE,C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE,outlook.exe,,,,,,,,,
-2025-08-18T14:02:00Z,,,,,,4688,HOST1,test,C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE,C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,powershell.exe -nop -enc AAA,,,
-2025-08-18T14:05:00Z,,,,,,4688,HOST1,test,C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE,C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE,outlook.exe,,,
-2025-08-18T14:02:00Z,,,,,,1,HOST1,,,,powershell.exe -nop -enc AAA,test,C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE,C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
-2025-08-18T14:05:00Z,,,,,,1,HOST1,,,,outlook.exe,test,C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE,C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE
+LogType,TimeGenerated,UserPrincipalName,AppDisplayName,IPAddress,Country,State,City,ClientAppUsed,ResultType,FailureReason,MFAResult,DeviceId,OperatingSystem,Browser
+SigninLogs,2025-08-20T09:00:00Z,renee.smith@contoso.com,Exchange Online,203.0.113.5,United States,Texas,Dallas,Browser,50055,Invalid username or password,NotApplied,MAC-11,macOS,Safari
+SigninLogs,2025-08-20T09:03:00Z,renee.smith@contoso.com,Exchange Online,203.0.113.5,United States,Texas,Dallas,Browser,50055,Invalid username or password,NotApplied,MAC-11,macOS,Safari
+SigninLogs,2025-08-20T09:06:00Z,renee.smith@contoso.com,Exchange Online,203.0.113.5,United States,Texas,Dallas,Browser,0,Success,Success,MAC-11,macOS,Safari

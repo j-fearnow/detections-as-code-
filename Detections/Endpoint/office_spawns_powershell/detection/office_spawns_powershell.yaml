@@ -15,12 +15,12 @@ logsource:
     category: process_creation
     product: windows
 detection:
-    selection_1:
+    selection_parent:
         ParentImage|endswith:
             - 'winword.exe'
             - 'excel.exe'
             - 'powerpnt.exe'
-    selection_2:
+    selection_child:
         Image|endswith: 
             - 'powershell.exe'
             - 'wscript.exe'

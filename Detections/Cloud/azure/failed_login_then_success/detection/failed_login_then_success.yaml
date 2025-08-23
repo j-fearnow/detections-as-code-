@@ -6,7 +6,6 @@ author: Jesse Fearnow
 date: 2025-08-23
 
 references:
-  - https://learn.microsoft.com/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins
   - https://attack.mitre.org/techniques/T1110/
 
 tags:

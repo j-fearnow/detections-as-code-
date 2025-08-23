@@ -1,0 +1,4 @@
+LogType,TimeGenerated,UserPrincipalName,AppDisplayName,IPAddress,Country,State,City,ClientAppUsed,ResultType,FailureReason,MFAResult,DeviceId,OperatingSystem,Browser
+SigninLogs,2025-08-20T08:00:00Z,alex.jones@contoso.com,Exchange Online,198.51.100.10,United States,Illinois,Chicago,Browser,0,Success,Success,WIN10-LAPTOP-01,Windows 10,Chrome
+SigninLogs,2025-08-20T08:30:00Z,alex.jones@contoso.com,SharePoint Online,198.51.100.10,United States,Illinois,Chicago,Browser,0,Success,Success,WIN10-LAPTOP-01,Windows 10,Chrome
+SigninLogs,2025-08-20T12:00:00Z,ben.ng@contoso.com,Exchange Online,198.51.100.50,United States,California,San Jose,Browser,50055,Invalid username or password,NotApplied,MAC-BEN-01,macOS,Safar
