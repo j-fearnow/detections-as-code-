@@ -1,0 +1,49 @@
+title: <detection_title_here>
+id: <unique_id_here>
+status: experimental
+description: >
+  <short_description_here>
+
+author: <your_name_or_team>
+date: <yyyy-mm-dd>
+
+references:
+  - <url_or_doc_reference>
+tags:
+  - attack.txxxx    # MITRE ATT&CK mapping(s)
+
+logsource:
+  category: <authentication/process/network/etc>
+  product: <product_or_platform>
+  service: <optional_specific_service>
+
+entities:
+  - user: <field_name_for_user>
+  - ip: <field_name_for_ip>
+required_fields:
+  - <field1>
+  - <field2>
+  - <field3>
+
+detection_logic:
+  summary: |
+    <plain_language_summary_of_logic>
+  kql_file: query.kql
+  spl_file: query.spl
+  sql_file: query.sql   # optional
+
+tuning:
+  suggestions:
+    - <ways_to_reduce_noise>
+falsepositives:
+  - <expected_fp_scenarios>
+
+level: medium   # low/medium/high/critical
+
+tests:
+  - name: malicious_case
+    input: malicious_test.json
+    expect_hits: true
+  - name: benign_case
+    input: benign_test.json
+    expect_hits: false

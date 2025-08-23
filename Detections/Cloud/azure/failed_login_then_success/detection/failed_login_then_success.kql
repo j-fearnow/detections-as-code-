@@ -1,0 +1,9 @@
+SigninLogs
+| where TimeGenerated >= ago(24h)
+| order by UserPrincipalName asc, TimeGenerated asc
+| serialize
+| extend PrevResultType = iff(prev(UserPrincipalName) == UserPrincipalName, toint(prev(ResultType)), int(null))
+| extend PrevTime       = iff(prev(UserPrincipalName) == UserPrincipalName, prev(TimeGenerated), datetime(null))
+| extend DeltaMin       = datetime_diff('minute', TimeGenerated, PrevTime)
+| where PrevResultType != 0 and toint(ResultType) == 0 and DeltaMin <= 10
+| project TimeGenerated, UserPrincipalName, IPAddress, ResultType, PrevResultType, DeltaMin

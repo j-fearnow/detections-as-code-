@@ -1,0 +1,6 @@
+index=azure_aad_signin earliest=-24h 
+| sort 0 UserPrincipalName _time 
+| streamstats current=f window=1 last(ResultType) as PrevResultType last(_time) as PrevTime by UserPrincipalName
+| eval DeltaMin = (_time - PrevTime)/60 
+| where PrevResultType!=0 AND ResultType=0 AND DeltaMin<=10 
+| table _time UserPrincipalName IPAddress ResultType PrevResultType DeltaMin

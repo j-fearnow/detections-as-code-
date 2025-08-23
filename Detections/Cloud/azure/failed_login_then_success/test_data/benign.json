@@ -1,0 +1,53 @@
+[
+  {
+    "LogType": "SigninLogs",
+    "TimeGenerated": "2025-08-20T08:00:00Z",
+    "UserPrincipalName": "alex.jones@contoso.com",
+    "AppDisplayName": "Exchange Online",
+    "IPAddress": "198.51.100.10",
+    "Country": "United States",
+    "State": "Illinois",
+    "City": "Chicago",
+    "ClientAppUsed": "Browser",
+    "ResultType": 0,
+    "FailureReason": "Success",
+    "MFAResult": "Success",
+    "DeviceId": "WIN10-LAPTOP-01",
+    "OperatingSystem": "Windows 10",
+    "Browser": "Chrome"
+  },
+  {
+    "LogType": "SigninLogs",
+    "TimeGenerated": "2025-08-20T08:30:00Z",
+    "UserPrincipalName": "alex.jones@contoso.com",
+    "AppDisplayName": "SharePoint Online",
+    "IPAddress": "198.51.100.10",
+    "Country": "United States",
+    "State": "Illinois",
+    "City": "Chicago",
+    "ClientAppUsed": "Browser",
+    "ResultType": 0,
+    "FailureReason": "Success",
+    "MFAResult": "Success",
+    "DeviceId": "WIN10-LAPTOP-01",
+    "OperatingSystem": "Windows 10",
+    "Browser": "Chrome"
+  },
+  {
+    "LogType": "SigninLogs",
+    "TimeGenerated": "2025-08-20T12:00:00Z",
+    "UserPrincipalName": "ben.ng@contoso.com",
+    "AppDisplayName": "Exchange Online",
+    "IPAddress": "198.51.100.50",
+    "Country": "United States",
+    "State": "California",
+    "City": "San Jose",
+    "ClientAppUsed": "Browser",
+    "ResultType": 50055,
+    "FailureReason": "Invalid username or password",
+    "MFAResult": "NotApplied",
+    "DeviceId": "MAC-BEN-01",
+    "OperatingSystem": "macOS",
+    "Browser": "Safari"
+  }
+]

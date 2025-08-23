@@ -1,5 +1,0 @@
-index="sysmon" EventID=1
-| rex field=ParentImage "(?i)\\\\(?<parent_proc>[^\\\\]+\.exe$)"
-| rex field=Image "(?i)\\\\(?<child_proc>[^\\\\]+\.exe$)"
-| where match(parent_proc, "(?i)^(winword|powerpnt|excel)\.exe$") AND match(child_proc, "(?i)^(powershell|wscript|cscript|cmd)\.exe$")
-| table _time Computer User parent_proc child_proc CommandLine

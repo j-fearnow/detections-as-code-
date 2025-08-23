@@ -1,0 +1,61 @@
+title: Failed login(s) followed by success (<=10m)
+id: failed_login_then_success_v1
+status: experimental
+description: Detect users who have one or more failed Azure AD sign-ins immediately followed by a successful sign-in within 10 minutes.
+author: Jesse Fearnow
+date: 2025-08-23
+
+references:
+  - https://learn.microsoft.com/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins
+  - https://attack.mitre.org/techniques/T1110/
+
+tags:
+  - attack.t1110
+  - attack.t1110.001
+  - attack.t1110.003
+  - attack.t1110.004
+
+logsource:
+  category: authentication
+  product: azure
+  service: azuread_signin
+
+entities:
+  - user: UserPrincipalName
+  - ip: IPAddress
+
+required_fields:
+  - TimeGenerated
+  - UserPrincipalName
+  - IPAddress
+  - ResultType
+
+lookback: 24h
+sequence_window: 10m
+
+detection_logic:
+  summary: |
+    Order sign-ins per user by TimeGenerated. Carry previous ResultType and time.
+    Alert when PrevResultType != 0 and ResultType == 0 and DeltaMin <= 10.
+  kql_file: query.kql
+  spl_file: query.spl
+
+tuning:
+  suggestions:
+    - Add threshold (e.g., at least 3 failures before the success)
+    - Suppress trusted IPs or identity providers
+    - Consider MFAResult to prioritize risky cases
+
+falsepositives:
+  - User mistyped passwords then succeeds soon after
+  - Password resets causing expected pattern
+  - Service accounts with retries followed by success
+
+level: medium
+tests:
+  - name: malicious_sequence_triggers
+    input: malicious_test.json
+    expect_hits: true
+  - name: benign_sequence_quiet
+    input: benign_test.json
+    expect_hits: false
